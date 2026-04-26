@@ -3,49 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programação Paraná NREAMS</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Programação Paraná | NREAMS</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* RESET E VARIÁVEIS BÁSICAS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f7f9; /* Fundo levemente cinza/azulado */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* CABEÇALHO */
+        header {
+            background-color: #0056b3; /* Azul profissional */
+            color: white;
+            padding: 2.5rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .titulo-principal {
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        /* CONTAINER PRINCIPAL */
+        main {
+            max-width: 900px;
+            margin: -2rem auto 2rem auto; /* Sobe um pouco em cima do header */
+            padding: 0 20px;
+            position: relative;
+        }
+
+        /* SEÇÕES ESTILO "CARTÃO" */
+        .cartao {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .titulo-centralizado {
+            text-align: center;
+            color: #0056b3;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        /* IMAGENS */
+        .img-logo {
+            display: block;
+            max-width: 180px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .img-atendimento {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 2rem auto 0 auto;
+            border: 1px solid #eee;
+        }
+
+        /* TEXTOS E MISSÃO */
+        .texto-conteudo p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            color: #4a4a4a;
+        }
+
+        .missao-destaque {
+            background-color: #e9f2fb;
+            padding: 1.5rem;
+            border-left: 5px solid #0056b3;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            font-weight: 600;
+            color: #004494;
+            margin: 1.5rem 0;
+            font-size: 1.15rem;
+            text-align: center;
+        }
+
+        /* LISTA DE BENEFÍCIOS */
+        .lista-beneficios {
+            list-style-type: none;
+            margin-bottom: 2rem;
+        }
+
+        .lista-beneficios li {
+            /* Ícone de check do próprio CSS */
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="%2328a745" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg>') no-repeat left top 4px;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            color: #4a4a4a;
+        }
+
+        /* BOTÃO */
+        .area-botao {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        .btn-servicos {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 6px rgba(40,167,69,0.3);
+        }
+
+        .btn-servicos:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+        }
+
+        /* RESPONSIVIDADE (Telas menores) */
+        @media (max-width: 768px) {
+            .titulo-principal { font-size: 2rem; }
+            .cartao { padding: 1.5rem; }
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <h1 class="titulo-principal">Programação Paraná </h1>
+        <h1 class="titulo-principal">Programação Paraná</h1>
     </header>
-    <img id="nucleo" src="recursos/logoAMS-removebg-preview.png">
-    <div class="principal">
-        <h2 class="titulo-centralizado"> Sobre a PROGRAMAÇÃO PARANÁ</h2>
 
-        <p>Nossa embaixada é localizada no <strong>NÚCLEO REGIONAL DE EDUCAÇÃO DA ÁREA
-                METROPOLITANA SUL (NREAMS)</strong>,
-            no bairro Boqueirão, em Curitiba.</p>
-        <p>Nossa missão é:</p>
-        <p id="missao"><em><strong> "Prestar suporte aos professores, alunos e
-                    todos os profissionais gestores sobre o uso da Plataforma Alura"</strong></em> </p>
-        <p> e todos os problemas decorrentes do seu uso como mudança de login, contas inativadas
-            ou problemas de acesso, além de promover os concursos da plataforma e toda natureza de demanda que seja
-            ordenada
-            pela chefia. </p>
-        <p> Somos compostos por 3 técnicos pedagógicos com mais de 2 décadas de experiência em
-            sala de aula, inclusive
-            ministrando aulas de <strong>Pensamento Computacional</strong> e temos como meta, atender a nossa clientela
-            com
-            o máximo de eficiência e carinho que cada demanda exige.</p>
-    </div>
-    <div class="beneficios">
-        <h3 class="titulo-centralizado">Benefícios</h3>
-        <ul>
-            <li class="itens">Atendimento especializado aos professores.</li>
-            <li class="itens">Contato direto via whatsApp. </li>
-            <li class="itens">Garantia de resolução de problemas de acesso. </li>
-            <a href="produtos.html">Serviços</a>
-        </ul>
-        <img src="recursos/MunicipiosAtendimentoBranco.jpg" class="imagemAtendimento">
-    </div>
+    <main>
+        <section class="cartao principal">
+            <img class="img-logo" src="recursos/logoAMS-removebg-preview.png" alt="Logo do NREAMS">
+            
+            <h2 class="titulo-centralizado">Sobre a Programação Paraná</h2>
+
+            <div class="texto-conteudo">
+                <p>Nossa embaixada é localizada no <strong>NÚCLEO REGIONAL DE EDUCAÇÃO DA ÁREA METROPOLITANA SUL (NREAMS)</strong>, no bairro Boqueirão, em Curitiba.</p>
+                
+                <p>Nossa missão é:</p>
+                
+                <div class="missao-destaque">
+                    "Prestar suporte aos professores, alunos e todos os profissionais gestores sobre o uso da Plataforma Alura"
+                </div>
+                
+                <p>...e todos os problemas decorrentes do seu uso como mudança de login, contas inativadas ou problemas de acesso, além de promover os concursos da plataforma e toda natureza de demanda que seja ordenada pela chefia.</p>
+                
+                <p>Somos compostos por 3 técnicos pedagógicos com mais de 2 décadas de experiência em sala de aula, inclusive ministrando aulas de <strong>Pensamento Computacional</strong> e temos como meta atender a nossa clientela com o máximo de eficiência e carinho que cada demanda exige.</p>
+            </div>
+        </section>
+
+        <section class="cartao beneficios">
+            <h3 class="titulo-centralizado">Benefícios</h3>
+            
+            <ul class="lista-beneficios">
+                <li>Atendimento especializado aos professores.</li>
+                <li>Contato direto via WhatsApp.</li>
+                <li>Garantia de resolução de problemas de acesso.</li>
+            </ul>
+
+            <div class="area-botao">
+                <a href="produtos.html" class="btn-servicos">Acessar Serviços</a>
+            </div>
+
+            <img src="recursos/MunicipiosAtendimentoBranco.jpg" class="img-atendimento" alt="Mapa dos Municípios de Atendimento">
+        </section>
+    </main>
 </body>
-
-
-
-
-
-
 </html>
